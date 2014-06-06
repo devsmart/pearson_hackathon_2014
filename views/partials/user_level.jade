@@ -1,0 +1,6 @@
+﻿div(ng-controller='LevelController')
+	.col-lg-12
+		h1 Select the Level
+		div.jumbotron(ng-repeat='level in levels')
+			p Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. 
+			a(class='btn btn-primary', href='/users/{{userId}}/vLabs/{{vLabId}}/userLevel/{{level.name}}/story') I'm a {{level.name}}

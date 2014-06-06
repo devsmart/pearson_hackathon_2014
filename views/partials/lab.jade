@@ -1,0 +1,20 @@
+﻿.row
+	.col-lg-12
+		h2 Welcome to {{vLabLevel.name}}
+.row
+	.col-lg-6.lab-items
+		h4 Apparatus
+		ul(class='item-list')
+			li(ng-repeat='item in vLabItems')
+				div(class='tool', x-lvl-draggable='true',item-type='apparatus',item-id='{{item.id}}')
+					img(src='{{item.imgUrl}}',alt='{{item.name}}')
+	.col-lg-6.lab-items
+		h4 Chemicals
+		ul(class='item-list')
+			li(ng-repeat='item in chemicalItems')
+				div(class='tool', x-lvl-draggable='true',item-type='chemical',item-id='{{item.id}}')
+					img(src='{{item.imgUrl}}',alt='{{item.name}}')
+	.col-lg-12
+		div.drop-area()
+			div(x-lvl-drop-target='true',x-on-drop='dropped(dragEl, dropEl)')
+				div(id='dragnDropContainerLab')

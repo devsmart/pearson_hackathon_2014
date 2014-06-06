@@ -1,0 +1,4 @@
+﻿div(ng-controller='LevelController')
+	.col-lg-12
+		div(ng-repeat='level in levels')
+			a(class='btn btn-primary', href='/users/{{userId}}/level/{{level.name}}/story') {{level.name}}
